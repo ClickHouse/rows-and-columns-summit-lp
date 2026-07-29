@@ -972,3 +972,98 @@
     .matrix-table { font-size: 0.8rem; }
     .matrix-table th, .matrix-table td { padding: 0.6rem 0.75rem; }
   }
+
+  /* ── SPEAKERS: FEATURED / HEADLINE ── */
+  .speakers-featured {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 3.5rem;
+  }
+
+  .speaker-featured-card {
+    background: var(--navy-mid);
+    border-radius: 8px;
+    padding: 2.5rem;
+    border: 1px solid rgba(46, 196, 196, 0.14);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2.25rem;
+    align-items: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .speaker-featured-card:hover {
+    border-color: rgba(46, 196, 196, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .speaker-featured-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    font-family: 'Courier New', monospace;
+    flex-shrink: 0;
+    color: var(--navy);
+  }
+
+  .speaker-featured-tag {
+    margin-bottom: 0.6rem;
+  }
+
+  .speaker-featured-name {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.01em;
+  }
+
+  .speaker-featured-role {
+    font-size: 0.95rem;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+  }
+
+  .speaker-featured-company {
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.9rem;
+  }
+
+  .speaker-featured-bio {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+
+  /* ── SPEAKERS: SECTION LABEL BETWEEN TIERS ── */
+  .speakers-subhead {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .speaker-featured-card {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    .speaker-featured-avatar { margin: 0 auto; }
+    .speaker-featured-bio { max-width: none; margin: 0 auto; }
+  }
