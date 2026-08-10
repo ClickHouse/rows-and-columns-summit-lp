@@ -1092,7 +1092,7 @@
  
   .sponsor-logos-grid-large {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1.75rem;
     margin-bottom: 3.5rem;
   }
