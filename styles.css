@@ -1175,3 +1175,100 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
+  /* ── DET COMMUNITY BOOTH ── */
+  .det-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.25rem 0 2.25rem;
+  }
+
+  .det-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(245, 194, 107, 0.3);
+    background: rgba(245, 194, 107, 0.06);
+    padding: 0.55rem 1rem;
+    border-radius: 4px;
+  }
+
+  .det-tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .det-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    max-width: 640px;
+  }
+
+  .det-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+    font-size: 1rem;
+    color: var(--white);
+    line-height: 1.5;
+  }
+
+  .det-list li::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+    margin-top: 0.4rem;
+  }
+
+  .det-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .det-card {
+    background: var(--navy-mid);
+    border-radius: 8px;
+    padding: 1.75rem;
+    border: 1px solid rgba(46, 196, 196, 0.08);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .det-card:hover {
+    border-color: rgba(46, 196, 196, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .det-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+
+  .det-card-body {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 768px) {
+    .det-cards { grid-template-columns: 1fr; }
+  }
