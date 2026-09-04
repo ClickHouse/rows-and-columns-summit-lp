@@ -152,7 +152,7 @@ This event brings together data practitioners, architects, vendors, and research
         </div>
       </div>
       <div class="program-row reveal">
-        <div class="program-time">1:00pm</div>
+        <div class="program-time">1:30pm</div>
         <div class="program-content">
           <div class="program-tag tag-talks">Talk</div>
           <div class="program-title">Hannes Mühleisen</div>
@@ -160,31 +160,31 @@ This event brings together data practitioners, architects, vendors, and research
         </div>
       </div>
       <div class="program-row reveal">
-        <div class="program-time">1:30pm</div>
-        <div class="program-content">
-          <div class="program-tag tag-talks">Case Study</div>
-          <div class="program-title">ShipScience</div>
-          <div class="program-desc">Details to be announced.</div>
-        </div>
-      </div>
-      <div class="program-row reveal">
         <div class="program-time">2:00pm</div>
         <div class="program-content">
           <div class="program-tag tag-talks">Case Study</div>
-          <div class="program-title">Rooftstock</div>
-          <div class="program-desc">Details to be announced.</div>
+          <div class="program-title">ShipScience</div>
+          <div class="program-desc">ShipScience audits parcel invoices and recovers carrier claims for e-commerce and Fortune 500 shippers — 200M shipments a year and over 1B tracking events. Their production MySQL database is the system of record, and it's messy by necessity: shipment data scraped from carrier portals by browser agents, tracking feeds over API, webhook, and SFTP, emailed invoices, OMS/ERP syncs from Shopify and Manhattan, and everything humans create in the UI — all while staying fast for the app. When they started building agents and ML models on that data, they weren't willing to let those workloads compete with user traffic, so they moved to streaming row-level CDC out of production with Artie, landing in MotherDuck within minutes across ~30 tables and ~3B row updates a month. This session covers why streaming CDC beat scheduled extracts (with implementation lessons), how Claude plus the MotherDuck MCP over application logs became an unplanned win that changed how their engineers debug, and ActiveAudit in production — what agentic auditing catches that rules-based auditing missed, and what it recovered for customers.</div>
         </div>
       </div>
       <div class="program-row reveal">
         <div class="program-time">2:30pm</div>
         <div class="program-content">
-          <div class="program-tag tag-talks">Talk</div>
+          <div class="program-tag tag-talks">Case Study</div>
+          <div class="program-title">Rooftstock</div>
+          <div class="program-desc">Roofstock needed to serve historical, data-heavy reports inside their application without turning every user request into an expensive analytical query — or maintaining duplicate reporting logic across product and warehouse. This session tells the engineering story of moving that workload to a continuously updated analytical serving layer: the architecture before and after, and the production decisions that made it work — deciding which data needed to be fresh, designing transformations that serve both application and analytical use cases, handling schema changes and backfills, validating accuracy during cutover, and managing the cost of an always-on workload. The result: report rendering dropped from minutes to seconds. Attendees will leave with a decision framework for recognizing when operational reporting has outgrown query tuning, a reference architecture for decoupling reports from operational data stores, and practical guidance for evaluating whether this design fits their own systems.</div>
+        </div>
+      </div>
+      <div class="program-row reveal">
+        <div class="program-time">3:00pm</div>
+        <div class="program-content">
+          <div class="program-tag tag-talks">Lightning Talks</div>
           <div class="program-title">Speaker TBA</div>
           <div class="program-desc">Details to be announced.</div>
         </div>
       </div>
       <div class="program-row reveal">
-        <div class="program-time">3:15pm</div>
+        <div class="program-time">3:30pm</div>
         <div class="program-content">
           <div class="program-tag tag-social">Break</div>
           <div class="program-title">Afternoon Break</div>
@@ -195,8 +195,8 @@ This event brings together data practitioners, architects, vendors, and research
         <div class="program-time">4:00pm</div>
         <div class="program-content">
           <div class="program-tag tag-talks">Talk</div>
-          <div class="program-title">Russel</div>
-          <div class="program-desc">Details to be announced.</div>
+          <div class="program-title">Russell Spritzer</div>
+          <div class="program-desc">We’re spending the day here talking about OLAP and OLTP data systems. Hybrid data systems, operational analytics databases, Postgres-based lakehouses, and streaming platforms. One thing that is clear, the industry is converging on Apache Iceberg as their shared data layer. This talk traces my storied past with OLAP/OLTP connectors, how Apache Iceberg has finally provided the ACID compatible table format we need for interoperability, and how OLTP use cases are driving the next generation of updates to Apache Iceberg V4. The open source community is growing, join us and learn how you can be a part of the next generation of hybrid systems.</div>
         </div>
       </div>
       <div class="program-row reveal">
@@ -229,7 +229,7 @@ This event brings together data practitioners, architects, vendors, and research
 
 
     <!-- Headline speaker(s) -->
-    <div class="speakers-featured reveal">
+    <div class="speakers-featured reveal" id="speakers">
 
       <div class="speaker-featured-card">
         <img src="headshots/andy.jpg" alt="Andy Pavlo" class="speaker-featured-photo">
@@ -262,7 +262,7 @@ This event brings together data practitioners, architects, vendors, and research
       </div>
 
         <div class="speaker-featured-card">
-        <img src="headshots/fatma.png" alt="Hannes Mühleisen" class="speaker-featured-photo">
+        <img src="headshots/fatma.png" alt="Fatma Ozcan" class="speaker-featured-photo">
         <div>
           <span class="program-tag tag-keynote speaker-featured-tag">Keynote</span>
           <div class="speaker-featured-name">Fatma Ozcan</div>
@@ -296,7 +296,7 @@ This event brings together data practitioners, architects, vendors, and research
         <div>
           <span class="program-tag tag-keynote speaker-featured-tag">Apache Iceberg: The Interoperability layer between OLTP and OLAP</span>
           <div class="speaker-featured-name">Russell Spitzer </div>
-          <div class="speaker-featured-role">Principal Engineer &amp; Apache Icberg PMC</div>
+          <div class="speaker-featured-role">Principal Engineer &amp; Apache Iceberg PMC</div>
           <div class="speaker-featured-company">Snowflake</div>
         </div>
       </div>
@@ -317,7 +317,7 @@ This event brings together data practitioners, architects, vendors, and research
           <span class="program-tag tag-keynote speaker-featured-tag"> Beyond Query Tuning: Rethinking Application Reporting </span>
           <div class="speaker-featured-name"> Shalaka Borker </div>
           <div class="speaker-featured-role"> Director of Data Engineering</div>
-          <div class="speaker-featured-company">Rooftsock</div>
+          <div class="speaker-featured-company">Roofstock</div>
         </div>
       </div>
 
@@ -325,58 +325,11 @@ This event brings together data practitioners, architects, vendors, and research
     </div>
 
 
-<!-- BOARD -->
-<section class="section" id="board">
-  <div class="section-inner">
-    <div class="section-eyebrow reveal">Organising committee</div>
-    <h2 class="section-title reveal">The <span style="color: var(--rose);">Board</span></h2>
-    <p class="section-body reveal">Rows &amp; Columns is organized by a small independent board of three including practitioners and community leaders with deep roots in data infrastructure. Backed by ClickHouse, with an independent program committee and blind CFP review.</p>
-    <div class="board-grid">
-
-      <div class="board-card reveal">
-        <img src="liz.png" alt="Elizabeth image" style="width: 150px; height: 150px; object-fit: contain; flex-shrink: 0;display: block; margin: 0 auto;">
-        <div class="board-name">Elizabeth Christensen</div>
-        <div class="board-company" style="color: var(--coral);">Snowflake</div>
-        <div class="board-bio">Open source developer advocate at Snowflake working on the Postgres and open lakehouse projects. She is PostgreSQL community contributor, board member a the US PostgreSQL Association, host of Postgres Meetup for All, and PostGIS Day.</div>
-      </div>
-
-      <div class="board-card reveal">
-         <img src="shane.jpg" alt="shanes image" style="width: 150px; height: 150px; object-fit: contain; flex-shrink: 0;display: block; margin: 0 auto;">
-        <div class="board-name">Shane Glass</div>
-        <div class="board-company" style="color: var(--gold);">Google</div>
-        <div class="board-bio">Shane is a senior developer advocate and open source strategist for Google, working across numerous open-source analytics communities and serving the Jupyter Foundation Governing Board. A lifelong learner with a Master's in Data Analytics. He loves connecting people, Pittsburgh sports, and finding the perfect donut.</div>
-      </div>
-
-        <div class="board-card reveal">
-        <img src="zoe.jpg" alt="Zoes image" style="width: 150px; height: 150px; object-fit: contain; flex-shrink: 0;display: block; margin: 0 auto;">
-        <div class="board-name">Zoe Steinkamp</div>
-        <div class="board-company" style="color: var(--teal);">ClickHouse</div>
-        <div class="board-bio">Senior Developer Advocate at ClickHouse focused on amazing open source databases and in person community events. Active agent of chaos across the data community with a background in problem solving and engineering.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VENUE -->
-<section class="section section-light" id="venue">
-  <div class="section-inner">
-    <div class="section-eyebrow reveal">The space</div>
-    <h2 class="section-title reveal">The <span style="color: var(--coral);">Venue</span></h2>
-    <p class="section-body reveal" style="max-width: 900px; margin-top: 1.5rem; font-size: 1.05rem; line-height: 1.85;">
-      We're hosting Rows &amp; Columns Summit at the <strong>Contemporary Jewish Museum</strong> in the heart of downtown San Francisco. Designed by Daniel Libeskind, the building is a striking blend of a restored 1907 power substation and a bold modern steel cube — a fitting backdrop for a conference about bridging old and new architectures. The venue features a 400-seat auditorium, a beautiful outdoor terrace for lunch and happy hour, and indoor gallery space for sponsor tables and networking.
-    </p>
-    <div style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-muted);">
-      736 Mission Street, San Francisco, CA 94105 · <a href="https://www.thecjm.org" target="_blank" style="color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(46,196,196,0.3);">thecjm.org</a>
-    </div>
-  </div>
-</section>
 
 <!-- SPONSORS -->
 <section class="apply-section" id="sponsors">
   <div class="apply-inner">
   <div class="sponsor-logos-inner">
-      <a href="rows-columns-sponsor-deck.pdf" target="_blank" style="background: white; color: #0D1B2A; font-weight: 700; padding: 0.9rem 2rem; border-radius: 4px; text-decoration: none; display: inline-block;">Get the sponsor deck →</a>
-
     <div class="sponsor-tier-label reveal">Our Sponsors</div>
  
     <!-- Large tier -->
@@ -431,6 +384,85 @@ This event brings together data practitioners, architects, vendors, and research
 
 </section>
 
+<!-- DET COMMUNITY BOOTH -->
+<section class="section" id="det-booth">
+  <div class="section-inner">
+    <div class="section-title reveal">DET Community Booth</div>
+ 
+    <div class="det-tags reveal">
+      <span class="det-tag">All day at Rows &amp; Columns</span>
+      <span class="det-tag">Open to All </span>
+    </div>
+ 
+    <p class="section-body reveal">Throughout the day, you'll be able to stop by the booth to:</p>
+ 
+    <ul class="det-list reveal">
+      <li>Connect 1:1 with experienced data engineers and mentors</li>
+      <li>Join small-group networking sessions with fellow practitioners</li>
+      <li>Learn how to get involved with the DET community</li>
+    </ul>
+ 
+    <div class="det-cards reveal">
+      <div class="det-card">
+        <div class="det-card-title">1:1 Mentorship Sessions</div>
+        <div class="det-card-body">To ensure you get dedicated time, we offer pre-booked 1:1 mentorship conversations. You can also walk up during the event, but pre-booking is recommended.</div>
+      </div>
+      <div class="det-card">
+        <div class="det-card-title">Networking Sessions</div>
+        <div class="det-card-body">Meet fellow data engineers during the event, start meaningful conversations, and make the most of your Rows &amp; Columns experience.</div>
+      </div>
+    </div>
+ 
+  </div>
+</section>
+
+<!-- BOARD -->
+<section class="section" id="board">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">Organising committee</div>
+    <h2 class="section-title reveal">The <span style="color: var(--rose);">Board</span></h2>
+    <p class="section-body reveal">Rows &amp; Columns is organized by a small independent board of three including practitioners and community leaders with deep roots in data infrastructure. Backed by ClickHouse, with an independent program committee and blind CFP review.</p>
+    <div class="board-grid">
+
+      <div class="board-card reveal">
+        <img src="liz.png" alt="Elizabeth image" style="width: 150px; height: 150px; object-fit: contain; flex-shrink: 0;display: block; margin: 0 auto;">
+        <div class="board-name">Elizabeth Christensen</div>
+        <div class="board-company" style="color: var(--coral);">Snowflake</div>
+        <div class="board-bio">Open source developer advocate at Snowflake working on the Postgres and open lakehouse projects. She is PostgreSQL community contributor, board member a the US PostgreSQL Association, host of Postgres Meetup for All, and PostGIS Day.</div>
+      </div>
+
+      <div class="board-card reveal">
+         <img src="shane.jpg" alt="shanes image" style="width: 150px; height: 150px; object-fit: contain; flex-shrink: 0;display: block; margin: 0 auto;">
+        <div class="board-name">Shane Glass</div>
+        <div class="board-company" style="color: var(--gold);">Google</div>
+        <div class="board-bio">Shane is a senior developer advocate and open source strategist for Google, working across numerous open-source analytics communities and serving the Jupyter Foundation Governing Board. A lifelong learner with a Master's in Data Analytics. He loves connecting people, Pittsburgh sports, and finding the perfect donut.</div>
+      </div>
+
+        <div class="board-card reveal">
+        <img src="zoe.jpg" alt="Zoes image" style="width: 150px; height: 150px; object-fit: contain; flex-shrink: 0;display: block; margin: 0 auto;">
+        <div class="board-name">Zoe Steinkamp</div>
+        <div class="board-company" style="color: var(--teal);">ClickHouse</div>
+        <div class="board-bio">Senior Developer Advocate at ClickHouse focused on amazing open source databases and in person community events. Active agent of chaos across the data community with a background in problem solving and engineering.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- VENUE -->
+<section class="section section-light" id="venue">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">The space</div>
+    <h2 class="section-title reveal">The <span style="color: var(--coral);">Venue</span></h2>
+    <p class="section-body reveal" style="max-width: 900px; margin-top: 1.5rem; font-size: 1.05rem; line-height: 1.85;">
+      We're hosting Rows &amp; Columns Summit at the <strong>Contemporary Jewish Museum</strong> in the heart of downtown San Francisco. Designed by Daniel Libeskind, the building is a striking blend of a restored 1907 power substation and a bold modern steel cube — a fitting backdrop for a conference about bridging old and new architectures. The venue features a 400-seat auditorium, a beautiful outdoor terrace for lunch and happy hour, and indoor gallery space for sponsor tables and networking.
+    </p>
+    <div style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-muted);">
+      736 Mission Street, San Francisco, CA 94105 · <a href="https://www.thecjm.org" target="_blank" style="color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(46,196,196,0.3);">thecjm.org</a>
+    </div>
+  </div>
+</section>
+
 
 <!-- FOOTER -->
 <footer>
@@ -439,7 +471,7 @@ This event brings together data practitioners, architects, vendors, and research
     <ul class="footer-links">
       <li><a href="#about">About</a></li>
       <li><a href="#program">Program</a></li>
-      <li><a href="#speakers">CFP</a></li>
+      <li><a href="#speakers">Speakers</a></li>
       <li><a href="#sponsors">Sponsors</a></li>
       <li><a href="code-of-conduct.html">Code of Conduct</a></li>
       <li><a href="event-terms.html">Event Terms</a></li>
